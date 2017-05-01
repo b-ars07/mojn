@@ -1,0 +1,36 @@
+/*--------------- mixins -------------*/
+
+@mixin clearfix {
+	&:before,
+	&:after {
+		content: "";
+		display: table;
+	}
+
+	&:after {
+		clear: both;
+	}
+}
+
+@mixin border-radius($radius: 5px) {
+	border-radius: $radius;
+	background-clip: padding-box;
+}
+
+@mixin placeholder($color: #000000) {
+	&::-webkit-input-placeholder {
+		color: $color;
+	}
+
+	&:-moz-placeholder {
+		color: $color;
+	}
+
+	&::-moz-placeholder {
+		color: $color;
+	}
+
+	&:-ms-placeholder {
+		color: $color;
+	}
+}
